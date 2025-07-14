@@ -1,0 +1,218 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+body {
+  margin: 0;
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+  min-height: 100vh;
+}
+.container.full {
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(10px);
+  padding: 30px;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 1000px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  animation: fadeIn 1.2s ease-in;
+}
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(30px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+.animated-header {
+  text-align: center;
+  margin-bottom: 20px;
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0% {transform: scale(1);}
+  50% {transform: scale(1.03);}
+  100% {transform: scale(1);}
+}
+form input, form select, form button {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+}
+form button {
+  background: #28a745;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+.summary {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin: 20px 0;
+}
+.summary-box {
+  flex: 1;
+  padding: 12px;
+  background: rgba(255,255,255,0.15);
+  border-radius: 10px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+.income-box { background: rgba(46, 204, 113, 0.2); }
+.expense-box { background: rgba(231, 76, 60, 0.2); }
+.balance-box { background: rgba(241, 196, 15, 0.2); }
+
+.chart-container {
+  background: rgba(255,255,255,0.1);
+  padding: 20px;
+  border-radius: 20px;
+  margin-top: 20px;
+}
+#transactions li {
+  background: #ffffff11;
+  border-radius: 8px;
+  padding: 10px;
+  margin: 8px 0;
+  display: flex;
+  justify-content: space-between;
+}
+.suggestions ul {
+  padding-left: 20px;
+  margin-top: 10px;
+}
+.alert {
+  color: #ff4444;
+  font-weight: bold;
+  animation: blink 1s infinite;
+}
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+.budget-section {
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(10px);
+  padding: 30px;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 1000px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  animation: fadeIn 1.2s ease-in;
+  margin-bottom: 20px; 
+}
+
+.goal-section {
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(10px);
+  padding: 30px;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 1000px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  animation: fadeIn 1.2s ease-in;
+  margin-bottom: 20px; 
+}
+/* Input fields */
+.budget-section input,
+.goal-section input {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  transition: all 0.3s ease;
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+.budget-section input:focus,
+.goal-section input:focus {
+  outline: none;
+  border-color: #00e6e6;
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 10px #00e6e6;
+}
+
+/* Buttons */
+.budget-section button,
+.goal-section button {
+  padding: 12px 20px;
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.budget-section button:hover,
+.goal-section button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+}
+/* Form input & select styles */
+#transaction-form input,
+#transaction-form select {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+#transaction-form input:focus,
+#transaction-form select:focus {
+  outline: none;
+  border-color: #00e6e6;
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 10px #00e6e6;
+}
+
+/* Submit button */
+#transaction-form button {
+  padding: 12px 20px;
+  margin-top: 10px;
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+#transaction-form button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+}
+.animated-header {
+  animation: slideIn 1s ease-in-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
